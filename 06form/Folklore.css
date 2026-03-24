@@ -182,30 +182,278 @@ div.gallery figcaption{
 /* formats creatures names in the shopping section */
 
 
-div.gallery p{
-    text-align:center;     
-    color: #725A7A; 
-    width: 200px; 
-    border: 1px solid black; 
-    height: auto; /* important */
+*{box-sizing:border-box;}
+
+body{
+    font-family: "Bitter", serif;
+    margin: 0;
+    background-color:#f5f5f5;
 }
-/* formats pricing + description in the shopping section */
+
+
+header{
+    
+    align-items: center; /* vertically aligns logo and text */
+
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+}
+   
+
+header span{
+    color:#230b70;
+    font-size: 1.6rem;
+    font-weight: 700;    
+}
+
+header p{
+    color:#725A7A;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 0.5;
+    text-align: center;
+
+}
+
+/** small screen navigation **/
+@media only screen and (max-width:600px){
+    nav{
+    background-color: #725A7A;
+    }
+
+    nav ul{
+    margin:0;
+    padding:0;
+    }
+
+    nav a{
+        display: block;
+        text-align: center;
+        padding:0.8rem;
+        font-weight: 600;
+        list-style-type: none;
+        text-decoration: none;
+        font-size: 1rem;
+        color:#f5f5f5;
+        border-bottom: solid 2px #230b70;
+        text-transform: uppercase;
+    }
+
+    nav .active a{
+        background-color: #725A7A;
+        color:#f5f5f5;
+        background-image: linear-gradient(to bottom, #230b70, black)
+    }
+}
+
+
+/** large screen navigation **/
+@media only screen and (min-width:601px){
+    nav{
+    background-color: #725A7A;
+}
+
+nav ul{
+    margin:0;
+    list-style-type: none;
+    display: flex;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 30.5%;
+    
+}
+/** padding-left: aligns the nav links in the middle of the page **/
+/** display flex: aligns the nav links next to eachother **/
+
+nav a{
+    text-align:center;
+    font-weight: 600;
+    padding: 1rem 1rem;
+    display: block;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color:#f5f5f5
+}
+/** padding: aligns the nav links next to eachother rather than underneath eachother **/
+/** display: makes the nav bar a thick box rather than a thin line **/
+/** text-decoration: removes the lines beneath the links **/
+
+nav .active a{
+    background-color: #725A7A;
+    color:#f5f5f5;
+    background-image: linear-gradient(to bottom, rgb(191, 188, 188), #725A7A)
+}
+
+nav a:hover{
+    color: #251813;
+}
+
+nav a:visited{
+    color: #230b70;
+}
+
+}
+
+h1{
+    color: #725A7A;
+    text-align: center;
+    margin-bottom: -0.9%;
+}
+
+h2{
+    text-align: center;
+    color: #725A7A;
+    margin-bottom: -0.8%;
+}
+
+p{ 
+    margin: 0 auto;         
+    padding: 1rem;
+    text-align: justify;
+    max-width: 98%;
+}
+
+main ol{
+    margin: 0;
+    list-style-position: inside;
+    padding-left: 18%;
+    list-style-type: upper-roman;
+    text-align: center;
+}
+
+main li{
+    margin-bottom: 1%;
+    margin-top: -0.6%
+}
+/* puts space between bold section and term */
+
+main dt{
+    color: #230b70;
+}
+
+main dd{
+    margin-top: 0.3%;
+    margin-bottom: 2%;
+}
+/* puts space between term and definition*/
+
+.heroimage{
+    width:100%;
+    height:auto;
+}
+
+address{
+margin: 0;
+display: flex; /* Use flexbox layout */
+justify-content: center; /* Center the items horizontally */
+list-style: none; /* Remove default list styling */
+padding: 0; /* Remove default padding */
+}
+/* formats the contact us section of the index page so it is in the middle of the page*/
+
+address ul{
+list-style-type: circle;
+}
+/* turns the bullet points of the contact us section of the index page into circles*/
+
+address a{
+    color:rgb(74, 111, 210);
+}
+/* turns the links of the contact us section of the index page blue*/
+
+.indexborder{
+color:white;
+font-style: normal;
+background-color: #725A7A;
+padding: 2rem;
+border-right: 15px;
+border-radius: 10px;
+border: 5px solid #230b70;
+width: 490px;
+}
+/* formats the border in the contact us section in the index page*/
+
+figure.exampletoy{
+    margin-right:1.1%;
+    float: right;
+}
+/* placement of the example toy image in the About Us Page*/
+
+figure.exampletoy img{
+    height:auto;
+}
+/* formats size of the example toy image in the About Us Page*/
+
+figure.exampletoy figcaption{
+    text-align: center; 
+}
+/* formats figcaption of the example toy image in the About Us Page*/
+
+div.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    column-gap: 5%;
+}
+/* formats images in the toys section as a 4x4 list*/
+
+div.gallery figure{
+    margin: 2%;
+    text-align: center;
+    padding-top: 2%;
+}
+/* formats images in the toys section */
+
+div.gallery figcaption{
+    font-size: 20px;
+    text-align: center;
+    border: 3px solid black;  
+    margin-bottom: 7%;
+    padding: 4%;
+    
+}
+/* formats creatures names in the toys section */
+
+.dropshadow:hover{
+    box-shadow: 0px 0px 20px #725A7A;
+}
+/* formats the shadow in the toys section */
+
+
+div.shoppingformat{
+    text-align:center;     
+    width: 200px; 
+    border: 3px solid #725A7A;  
+    height: auto; /* important */
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-top: 10%;
+}
+/* formats pricing + description in the toys section */
 
 .formFormatting label{
     margin: 0.5rem;
     display: block;
 }
 
-.paragraphSpacing{
-    display: flex;
-    flex-direction: column;
-    line-height:1.4;
-    margin-top: 12px;
+.paragraphSpacing span{
+    display:block;
+    line-height:0.7;
+    margin-top:12px;
 }
 
-.formFormatting p{
-    font-size: 18px;
+/* formats "cost" and "time required" sections of customtoys beneath eachother */
+
+.descriptionformatting{
+    display: block;
+    font-size: 20px;
     line-height: 1.4;
+    padding-left: 23px;
+    padding-top: 10px;
 }
 
 .formFormatting select{
@@ -256,7 +504,7 @@ div.gallery p{
 }
 /* formats how the textbox looks in the Custom Toys Page*/
 
-.formFormatting div{
+.titlefontsize{
     font-size: 18px;
     font-weight: bold;
 }
@@ -265,6 +513,8 @@ div.gallery p{
 .linebreakup{
     border-color:#26116b;
     border-width: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 /* formats how the linebreakup of "Our Requirements" section in the Custom Toys Page and Creatures Page*/
 
@@ -385,5 +635,8 @@ padding: 0; /* Remove default padding */
 clear:both; /* keeps footer below image in About Us page */
 }
 
-
+header, nav, main, footer{
+    max-width:88rem;
+    margin: 0 auto;
+}
 
